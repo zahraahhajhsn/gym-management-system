@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assemblypoint.signupcontroller">
+   <children>
+      <ImageView fitHeight="406.0" fitWidth="728.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/best-fitness-apps-update_.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="394.0" layoutY="11.0" prefHeight="331.0" prefWidth="306.0" style="-fx-border-color: orange;">
+         <children>
+            <Label alignment="CENTER" layoutX="42.0" layoutY="14.0" text="Personal Information">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="21.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="BLACK" offset="0.42528735632183906" />
+                        <Stop color="WHITE" offset="0.8390804597701149" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="height" layoutX="18.0" layoutY="147.0" prefHeight="25.0" prefWidth="75.0" promptText="height (in m)">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="weight" layoutX="109.0" layoutY="147.0" prefHeight="25.0" prefWidth="75.0" promptText="weight (in kg)">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <CheckBox fx:id="male" layoutX="78.0" layoutY="187.0" mnemonicParsing="false" onAction="#chooseGender" text="Male">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#432828" />
+                        <Stop color="#432828" offset="0.21455938697318006" />
+                        <Stop color="#432828" offset="0.3524904214559387" />
+                        <Stop color="WHITE" offset="0.4904214559386973" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></CheckBox>
+            <CheckBox fx:id="female" layoutX="146.0" layoutY="187.0" mnemonicParsing="false" onAction="#chooseGender" text="Female" textFill="WHITE" />
+            <Label layoutX="17.0" layoutY="180.0" prefHeight="26.0" prefWidth="59.0" text="Gender :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="18.0" layoutY="226.0" text="Exercise Rate :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <CheckBox fx:id="rarely" layoutX="110.0" layoutY="226.0" mnemonicParsing="false" onAction="#exerciseRate" text="Rarely" textFill="#fff7f7" />
+            <CheckBox fx:id="often" layoutX="111.0" layoutY="250.0" mnemonicParsing="false" onAction="#exerciseRate" text="Often" textFill="WHITE" />
+            <CheckBox fx:id="always" layoutX="111.0" layoutY="273.0" mnemonicParsing="false" onAction="#exerciseRate" text="Always" textFill="WHITE" />
+            <TextField fx:id="dd" layoutX="15.0" layoutY="90.0" prefHeight="25.0" prefWidth="54.0" />
+            <TextField fx:id="mm" layoutX="84.0" layoutY="90.0" prefHeight="26.0" prefWidth="54.0" />
+            <TextField fx:id="yyyy" layoutX="155.0" layoutY="90.0" prefHeight="25.0" prefWidth="54.0" />
+            <Label layoutX="17.0" layoutY="49.0" prefHeight="17.0" prefWidth="59.0" text="Birthday:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#432828" />
+                        <Stop color="#432828" offset="0.08429118773946358" />
+                        <Stop color="WHITE" offset="0.2260536398467433" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+            <Label layoutX="75.0" layoutY="94.0" text="/">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="143.0" layoutY="94.0" text="/">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="hh" layoutX="18.0" layoutY="128.0" prefHeight="17.0" prefWidth="75.0" textFill="#c51010" />
+            <Label fx:id="ww" layoutX="112.0" layoutY="128.0" prefHeight="20.0" prefWidth="75.0" textFill="#c51010" />
+            <Label fx:id="bb" layoutX="19.0" layoutY="66.0" prefHeight="0.0" prefWidth="119.0" textFill="#c51010" />
+         </children>
+      </AnchorPane>
+      <Button id="submitsignin" blendMode="HARD_LIGHT" layoutX="581.0" layoutY="347.0" mnemonicParsing="false" onAction="#submithandler" prefHeight="45.0" prefWidth="126.0" text="Submit to Sign Up">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="22.0" layoutY="14.0" prefHeight="331.0" prefWidth="306.0" style="-fx-border-color: orange;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="107.0" layoutY="14.0" prefHeight="20.0" prefWidth="92.0" text="Sign Up " textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="email" layoutX="14.0" layoutY="147.0" onKeyTyped="#FieldHandler" prefHeight="25.0" prefWidth="199.0" promptText="email*">
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <TextField fx:id="ln" layoutX="14.0" layoutY="105.0" onKeyTyped="#FieldHandler" prefHeight="25.0" prefWidth="199.0" promptText="lastname*">
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <TextField fx:id="pass" layoutX="14.0" layoutY="191.0" onKeyTyped="#FieldHandler" prefHeight="25.0" prefWidth="199.0" promptText="password*">
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <TextField fx:id="phonenumber" layoutX="14.0" layoutY="275.0" onKeyTyped="#FieldHandler" prefHeight="25.0" prefWidth="199.0" promptText="telephone number(+961)*">
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <TextField fx:id="cpass" layoutX="14.0" layoutY="233.0" onKeyTyped="#FieldHandler" prefHeight="25.0" prefWidth="199.0" promptText="confirm password*">
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <TextField fx:id="fn" layoutX="14.0" layoutY="61.0" onKeyTyped="#FieldHandler" prefHeight="25.0" prefWidth="199.0" promptText="firstname*">
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <Label fx:id="label1" layoutX="14.0" layoutY="44.0" prefHeight="17.0" prefWidth="199.0" textFill="#c51010" />
+            <Label fx:id="label2" layoutX="14.0" layoutY="86.0" prefHeight="17.0" prefWidth="199.0" textFill="#c51010" />
+            <Label fx:id="label3" layoutX="14.0" layoutY="130.0" prefHeight="17.0" prefWidth="199.0" textFill="#c51010" />
+            <Label fx:id="label4" layoutX="14.0" layoutY="172.0" prefHeight="20.0" prefWidth="199.0" textFill="#c51010" />
+            <Label fx:id="label5" layoutX="14.0" layoutY="216.0" prefHeight="17.0" prefWidth="199.0" textFill="#c51010" />
+            <Label fx:id="label6" layoutX="14.0" layoutY="258.0" prefHeight="17.0" prefWidth="199.0" textFill="#c51010" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="335.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/repeat_32219.png" />
+         </image>
+      </ImageView>
+      <Button blendMode="MULTIPLY" layoutX="335.0" layoutY="346.0" mnemonicParsing="false" onAction="#reset" prefHeight="45.0" prefWidth="45.0" />
+      <ImageView fitHeight="36.0" fitWidth="75.0" layoutX="22.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/585e473bcb11b227491c3381.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="back1" blendMode="MULTIPLY" layoutX="22.0" layoutY="351.0" mnemonicParsing="false" onAction="#backhandler" prefHeight="36.0" prefWidth="43.0" />
+   </children>
+</AnchorPane>

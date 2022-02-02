@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assemblypoint.usercontroller">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="714.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/best-fitness-apps-update_j.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="388.0" layoutY="19.0" prefHeight="51.0" prefWidth="281.0" text="Welcome To Assembly Point!" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="378.0" layoutY="70.0" prefHeight="317.0" prefWidth="301.0" style="-fx-border-color: orange;">
+         <children>
+            <Label layoutX="72.0" layoutY="25.0" text="Sign in As User">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField id="fie" fx:id="email" layoutX="76.0" layoutY="69.0" promptText="Email">
+               <effect>
+                  <Reflection />
+               </effect>
+            </TextField>
+            <PasswordField fx:id="password" layoutX="76.0" layoutY="118.0" promptText="Pasword">
+               <effect>
+                  <Reflection />
+               </effect>
+            </PasswordField>
+            <Button blendMode="MULTIPLY" layoutX="113.0" layoutY="165.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Submit" />
+            <Label layoutX="114.0" layoutY="204.0" text="forgot password?" textFill="#0e08b5" underline="true">
+               <font>
+                  <Font name="Arial Narrow" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="248.0" prefHeight="23.0" prefWidth="101.0" text="New User?">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button id="signup" blendMode="MULTIPLY" layoutX="148.0" layoutY="247.0" mnemonicParsing="false" onAction="#signuphandler" prefHeight="25.0" prefWidth="76.0" text="Sign up" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
